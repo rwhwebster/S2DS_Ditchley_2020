@@ -12,6 +12,7 @@ def build_data_dir(fp):
     '''
     dirs = [os.path.join(fp, 'data/'),] # Initialise list of directories with the root of the data directory structure
     dirs.append(os.path.join(dirs[0], 'raw/')) # append data directory sub-folders to list of dirs to check/create
+    dirs.append(os.path.join(dirs[0], 'raw/users_tweets'))
     dirs.append(os.path.join(dirs[0], 'processed/')) 
     dirs.append(os.path.join(dirs[0], 'outputs/'))
     
@@ -31,7 +32,7 @@ def install_nltk_data():
     '''
     import nltk
 
-    corpus_list = ['stopwords', 'punkt']
+    corpus_list = ['stopwords', 'punkt', 'wordnet']
 
     for corpus in corpus_list:
         nltk.download(corpus)
