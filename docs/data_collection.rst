@@ -1,12 +1,3 @@
-
-Data Collection
----------------
-
-Webscraping Journalist Twitter handles
-
-Requesting user profiles
-
-
 Data Collection: Scraping friend lists
 --------------------------------------
 The friend lists are scraped using Twint (with the _get_friends function) and saved as individual csv for each journalist; the individual csvs are then joined using the function join_friends_csv. The _get_friends function is used in combination with then twint_in_queue function which uses multi-threading on multiple cores (the number of cores need to be assigned as a function argument). This set up speeds up the process (the Twitter API has more limitations for dowloading lists of friends/followers and would therefore be slower). It has to be noted that if you want to abort the process while the twint_in_queue function is running, you will need to interrupt and restart your kernel, and delete from the folder the files that were produced because they might be incomplete lists of friends.
