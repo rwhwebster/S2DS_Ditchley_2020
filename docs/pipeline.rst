@@ -1,19 +1,18 @@
 The Data Pipeline
 =================
+There are 4 key components to our analysis pipeline:
 
-Data Collection
----------------
+* Data collection
+* Statistical analysis
+* Tweet topic modelling
+* Graph database interactions
 
-Webscraping Journalist Twitter handles
+The workflow to run through each of these components can be found in the ``pipeline`` directory of the repository.  Some broader details are outlined below:
 
-Requesting user profiles
+.. include:: data_collection.rst
 
-Scraping friend lists
+.. include:: statistical_analysis.rst
 
-Requesting user tweets
+.. include:: topic_modelling.rst
 
-
-Inputting data to the Graph Database
-------------------------------------
-
-py2neo funtions
+.. include:: graph_database.rst
